@@ -1,0 +1,16 @@
+== after-fix: bin/fm-spawn.sh at target commit 690bd6e ==
+$ cd <firstmate-home> && fm-spawn.sh manual-missing-proj-x1 --mode no-mistakes --yolo off
+error: missing <project-dir> argument: name the project directory for task manual-missing-proj-x1 (usage: fm-spawn.sh <task-id> <project-dir> ...)
+exit=2
+state/manual-missing-proj-x1.meta: not written
+data/manual-missing-proj-x1/launch-brief.md: not written
+
+$ cd <firstmate-home> && fm-spawn.sh manual-missing-proj-x1 '' --mode no-mistakes --yolo off   # empty project arg
+error: missing <project-dir> argument: name the project directory for task manual-missing-proj-x1 (usage: fm-spawn.sh <task-id> <project-dir> ...)
+exit=2
+state/manual-missing-proj-x1.meta: not written
+data/manual-missing-proj-x1/launch-brief.md: not written
+
+$ cd <firstmate-home> && fm-spawn.sh manual-missing-proj-x1 --scout   # scout, no project
+error: missing <project-dir> argument: name the project directory for task manual-missing-proj-x1 (usage: fm-spawn.sh <task-id> <project-dir> ...)
+exit=2

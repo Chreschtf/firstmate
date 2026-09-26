@@ -1,0 +1,18 @@
+== before-fix: bin/fm-spawn.sh from base commit bb69be6 (swapped into the worktree for this run) ==
+$ cd <firstmate-home> && fm-spawn.sh manual-missing-proj-x1 --mode no-mistakes --yolo off
+<repo>/bin/fm-spawn.sh: line 1835: POS[1]: unbound variable
+exit=1
+state/manual-missing-proj-x1.meta: not written
+data/manual-missing-proj-x1/launch-brief.md: not written
+
+$ cd <firstmate-home> && fm-spawn.sh manual-missing-proj-x1 '' --mode no-mistakes --yolo off   # empty project arg
+warning: <firstmate-home>/data/manual-missing-proj-x1/launch-brief.md records no ship branch; defaulting to legacy branch fm/manual-missing-proj-x1
+warning: <firstmate-home>/data/manual-missing-proj-x1/launch-brief.md records no delivery contract line (scaffolded before ship briefs recorded one); launching on the explicit --mode no-mistakes - confirm its definition of done matches
+error: treehouse get did not enter an isolated worktree within 60s (last seen 'none': the pane reported no path; spawning project '<firstmate-home>'); inspect window firstmate:fm-manual-missing-proj-x1
+exit=1
+state/manual-missing-proj-x1.meta: not written
+data/manual-missing-proj-x1/launch-brief.md: WRITTEN
+
+$ cd <firstmate-home> && fm-spawn.sh manual-missing-proj-x1 --scout   # scout, no project
+<repo>/bin/fm-spawn.sh: line 1835: POS[1]: unbound variable
+exit=1

@@ -1,0 +1,6 @@
+== new test tests/fm-spawn-missing-project-error.test.sh run against BASE bin/fm-spawn.sh (bb69be6) ==
+FM_TEST_BEGIN 2026-09-26T20:32:29Z tests/fm-spawn-missing-project-error.test.sh family=backend-dispatch expected_gate_skip=none
+not ok - ship with no project argument: refusal did not name the missing project argument: /Users/chrescht/.no-mistakes/worktrees/5c3816ac71de/01M3FPAZ55TSPX79C9RE85MJKJ/bin/fm-spawn.sh: line 1835: POS[1]: unbound variable
+FM_TEST_END 2026-09-26T20:32:30Z tests/fm-spawn-missing-project-error.test.sh exit=1 duration_ms=500 gate_skip=false
+FM_TEST_SUMMARY total=1 failed=1 skipped_gate=0 duration_ms=601
+FM_TEST_SUMMARY_FAMILY family=backend-dispatch count=1 duration_ms=500 failed=1
